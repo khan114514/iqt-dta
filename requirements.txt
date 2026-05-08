@@ -1,0 +1,10 @@
+numpy
+pandas
+requests
+scipy
+scikit-learn
+torch
+torch-geometric
+rdkit
+networkx
+tqdm
