@@ -427,8 +427,8 @@ def run_training(args):
             )
             logger.info(f"saved best checkpoint to {best_checkpoint_path}")
         else:
-            patience_count = best_val.counter()
-            if patience_count > args.early_stop_epoch:
+            best_val.counter()
+            if best_epoch is not None and current_epoch - best_epoch > args.early_stop_epoch:
                 logger.info(f"early stop in epoch {current_epoch} step {current_step}")
                 break_flag = True
 

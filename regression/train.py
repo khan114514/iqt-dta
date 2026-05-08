@@ -30,7 +30,7 @@ def build_parser():
     parser.add_argument("--eval_batch_size", type=int, default=256, help="Evaluation batch size.")
     parser.add_argument("--epochs", type=int, default=3000, help="Number of full passes over the training loader.")
     parser.add_argument("--steps_per_epoch", type=int, default=50, help="Validation cadence in optimizer steps.")
-    parser.add_argument("--early_stop_epoch", type=int, default=400, help="Patience on validation loss.")
+    parser.add_argument("--early_stop_epoch", type=int, default=400, help="Validation-loss patience measured in epochs.")
     parser.add_argument("--num_workers", type=int, default=8, help="DataLoader worker count.")
     parser.add_argument("--val_fraction", type=float, default=0.1, help="Validation fraction for legacy random split fallback.")
     parser.add_argument("--model_name", default="MGraphDTA", help="Backbone name. Must remain MGraphDTA.")
